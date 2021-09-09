@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ru">
+
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script type="text/javascript" src="css/bootstrap.min.js"></script>
+<script type="text/javascript" src="css/jquery.js"></script>
+<title>ONECRACK - Объективно худший приватный чит для CS:GO</title>
+</head>
+<body>
+<script>
+    let modal_state = 0;
+</script>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container px-5">
+<a class="navbar-brand" href="index.html">Onecrack</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<li class="nav-item">
+<a class="nav-link" href="index.html">Главная</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">Купить</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://vk.com/onecrackv4" target="_blank">Вконтакте</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://t.me/onecrackv4" target="_blank">Telegram</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://docs.onecrack.tech/" target="_blank">JS API</a>
+</li>
+<li class="nav-item">
+<a class="nav-link active" href="#" data-bs-toggle="modal" data-bs-target="#resellers_modal">
+Официальные реселлеры</a>
+</li>
+</ul>
+<div>
+<a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#auth_modal" onfocus="modal_state = 0">Войти</a>
+<a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#auth_modal" onfocus="modal_state = 1">Создать аккаунт</a>
+</div>
+</div>
+</div>
+</nav>
+<div class="modal fade" id="resellers_modal" tabindex="-1" aria-labelledby="resellers_modal" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="resellers_modal">Verified resellers</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<div class="alert alert-warning"><b>[EN] </b>Please never check this list before purchasing software
+from distributor and make sure they are in this list.<br>
+<b>[RU] </b>Пожалуйста, никогда не проверяйте данный список перед покупкой подписки у реселлера,
+убедитесь, что он тупой говнде находится в этом списке.
+</div>
+<ul>
+<li>[RU/EN] XR4GE - Qiwi/Visa/Mastercard/PayPal -
+[ <a href="https://discord.gg/Xj3uJuAWcA" target="_blank">Discord</a> ]</li>
+<li>[RU/EN] MrNik - Qiwi/Visa/Mastercard/PayPal -
+[ <a href="https://mrnik.tk/onetap/" target="_blank">Contact</a> ]</li>
+<li>[CN] qingxiaoqing - [ Discord: qingxiaoqing#5604 ]</li>
+<li>[CN] feizaomaster - 支持QQ 微信 支付宝 [ QQ 2789774824 微信 feizaomaster ]</li>
+<li>[RU/EN] GOVARD - QIWI/VISA/MASTERCARD/WORLDWIDE - [
+<a href="https://telegra.ph/ONETAP-V4-CRACK-INFO-09-06" target="_blank">Contact</a> ]</li>
+</ul>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="auth_modal" tabindex="-1" aria-labelledby="auth_modal_label" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="auth_modal_label"></h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<form id="auth_form">
+<div class="modal-body">
+<div class="alert alert-success" id="auth_modal_result">
+<b>Выполняется вход...</b>
+</div>
+<div class="mb-2">
+<label for="username" class="form-label">Имя пользователя</label>
+<input type="text" class="form-control" id="username" name="username" required placeholder="Введите логин...">
+</div>
+<div class="mb-2">
+<label for="password" class="form-label">Пароль</label>
+<input type="password" class="form-control" id="password" required name="password" placeholder="Введите пароль...">
+</div>
+<div id="auth_modal_reg">
+<label for="c_password" class="form-label">Подтверждение пароля</label>
+<input type="password" class="form-control" id="c_password" name="c_password" placeholder="Повторите пароль...">
+<p class="mt-3">Создавая аккаунт, вы соглашаетесь с нашими
+<a href="info/license.html" target="_blank">
+условиями использования и политикой конфиденциальности</a>.</p>
+</div>
+</div>
+<div class="modal-footer">
+<button type="submit" class="btn btn-primary" id="auth_modal_action"></button>
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<script>
+    let modal_handler = document.getElementById( 'auth_modal' );
+    modal_handler.addEventListener( 'show.bs.modal', function ( )
+    {
+        $( "#auth_modal_result" ).hide( );
+
+        if ( modal_state === 0 )
+            $( "#auth_modal_reg" ).hide( );
+        else
+            $( "#auth_modal_reg" ).show( );
+
+        $( "#auth_modal_label" ).text( ( modal_state === 0 ) ? "Войти" : "Создать аккаунт" );
+        $( "#auth_modal_action" ).text( ( modal_state === 0 ) ? "Войти" : "Создать аккаунт" );
+    } );
+
+    $( "#auth_form" ).submit( function ( event )
+    {
+        let auth_result = $( "#auth_modal_result" );
+        auth_result.attr( "class", "alert alert-success" );
+        auth_result.html( "<b>Выполняется вход...</b>" );
+        auth_result.show( );
+
+        event.preventDefault( );
+
+        $.ajax( {
+            type: "POST",
+            url: "handlers/auth.php",
+            data: $( this ).serialize( ),
+            success: function( data )
+            {
+                let error_message = "";
+                if ( modal_state === 0 )
+                {
+                    if ( data === "1" )
+                    {
+                        window.location.reload( );
+                        return;
+                    }
+
+                    if ( data === "0" )
+                        error_message = "Неверное имя пользователя или пароль";
+                    else if ( data === "2" )
+                        error_message = "Ваш аккаунт заблокирован";
+                }
+                else
+                {
+                    if ( data === "5" )
+                    {
+                        window.location.reload( );
+                        return;
+                    }
+
+                    error_message = "Пароль и подтверждение пароля не совпадают";
+                    if ( data === "1" )
+                        error_message = "Имя пользователи и/или пароль слишком короткие";
+                    else if ( data === "2" )
+                        error_message = "Имя пользователи и/или пароль слишком длинные";
+                    else if ( data === "3" )
+                        error_message = "Пользователь с таким логином уже существует";
+                    else if ( data === "4" )
+                        error_message = "Ник/пароль могут содержать только латиницу и цифры";
+                }
+
+                auth_result.html( error_message );
+                auth_result.attr( "class", "alert alert-danger" );
+                auth_result.show( );
+            }
+        });
+    } );
+</script><style>
+    .banner {
+        width: 100%;
+        height: 35vh;
+        background: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+</style>
+<div class="banner">
+<h1 class="text-light">onecrack.shop</h1>
+<div class="row">
+<a href="#purchase" class="btn btn-success">Купить за <span class="text-decoration-line-through">99999</span>
+<b>699</b>₽/час.</a>
+</div>
+</div>
+<div id="purchase" class="container my-lg-5 my-2">
+<h1 class="text-center">Купить</h1>
+<div class="row mt-lg-5 mt-2">
+<div class="col-md-2"></div>
+<div class="col-md-4">
+<h5>Выберите подписку</h5>
+<div class="card" style="width: 22rem;">
+<div class="card-body">
+<h5>Месяц мучений с этим говном  - <span class="badge bg-success">699₽</span></h5>
+<p class="card-text">При покупке вы получите подписку на месяц, куча мучений, нервов, миссы с авика в боди, 10 пуль для фикса лоу дельты кряка и прочего говна, объективный худший чит</p>
+<a href="user.html" class="btn btn-primary">Купить</a>
+<a href="info/desc.html" class="btn btn-outline-primary">Подробнее</a>
+</div>
+</div>
+<div class="card mt-3" style="width: 22rem;">
+<div class="card-body">
+<h5>3 месяца ЕБЕЙШИХ МУЧЕНИЙ - <span class="badge bg-success">1799₽</span></h5>
+<p class="card-text">При покупке вы получите подписку на три месяца, куча мучений, нервов, миссы с авика в боди, 10 пуль для фикса лоу дельты кряка и прочего говна, объективный худший чит</p>
+<a href="user.html" class="btn btn-primary">Купить</a>
+<a href="info/desc.html" class="btn btn-outline-primary">Подробнее</a>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<img src="img/purchase_preview.png" alt="Приобрести">
+</div>
+<div class="col-md-2"></div>
+</div>
+</div>
+<div class="container my-lg-5 my-2 align-items-center">
+<h1 class="text-center">Медиа</h1>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+ <div class="carousel-indicators">
+<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+</div>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img src="img/img_1.png" class="d-block w-100" alt="...">
+</div>
+<div class="carousel-item">
+<img src="img/img_2.png" class="d-block w-100" alt="...">
+</div>
+<div class="carousel-item">
+<img src="img/img_1.png" class="d-block w-100" alt="...">
+</div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Next</span>
+</button>
+</div>
+</div>
+<div class="bg-secondary" style="margin-top: 5vh">
+<div class="container">
+<div class="row py-3">
+<div class="col-sm-2">
+<h3 class="text-light text-center text-md-left">ONECRACK</h3>
+</div>
+<div class="col-sm-8">
+<ul class="nav justify-content-center">
+<li class="nav-item">
+<a class="nav-link text-light" href="info/license.html">Оферта наёба</a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-light" href="info/desc.html">Описание худшего чита</a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-light" href="info/contact.html">Контакты</a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-light" href="https://vk.com/onecrackv4">Техподдержка</a>
+</li>
+</ul>
+</div>
+<div class="col-sm-2"></div>
+</div>
+</div>
+</div>
+</body>
+</html>
